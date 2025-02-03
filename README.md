@@ -1,12 +1,24 @@
-circom ageProof.circom --r1cs --wasm --sym
+# 🔐 CrypticSafe
 
-snarkjs powersoftau new bn128 12 pot12_0000.ptau -v
-snarkjs powersoftau contribute pot12_0000.ptau pot12_0001.ptau --name="First contributor"
+CrypticSafe is a **decentralized digital identity management system** that utilizes **blockchain technology** for secure document verification and user authentication.
 
+## 🚀 Features
+- ✅ **Decentralized Identity:** Secure storage and management of digital identities.
+- ✅ **Document Verification:** Government and third-party departments can verify and update documents.
+- ✅ **User Consent Management:** Users control access to their sensitive data.
+- ✅ **Smart Contracts:** Ensures trustless execution of identity verification.
+- ✅ **Automatic Expiry:** Documents have a predefined expiration period for enhanced security.
 
-snarkjs powersoftau prepare phase2 pot12_0001.ptau pot12_final.ptau -v
-snarkjs groth16 setup ageProof.r1cs pot12_final.ptau ageProof_0000.zkey
-snarkjs zkey contribute ageProof_0000.zkey ageProof_0001.zkey --name="Second contributor"
-snarkjs zkey export verificationkey ageProof_0001.zkey verification_key.json
+## 🏗 Tech Stack
+- **Blockchain:** Ethereum, Solidity, Truffle
+- **Frontend:** React, TypeScript
+- **Backend:** Node.js, Express
+- **Storage:** IPFS (for decentralized file storage)
+- **Authentication:** Web3.js
 
-node ageProof_js/generate_witness.js ageProof_js/ageProof.wasm input.json witness.wtns
+## ⚙️ Installation & Setup
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/Nafeessidd1/CrypticSafe.git
+   cd CrypticSafe
+
